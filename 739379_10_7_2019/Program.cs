@@ -49,10 +49,10 @@ namespace _739379_10_7_2019
                 }
 
                 //closing file
-               
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
 
+                // Calling Functions Using Class
                 PlayingWithStacks.Run(names);
                 PlayingWithLinkedList.Run(nameStack);
                 PlayingWithLinkedList.Sort(namesList);
@@ -100,20 +100,9 @@ namespace _739379_10_7_2019
                 Console.WriteLine("______________________________");
                 foreach (var itm in namesList)
                     Console.Write(itm + ", ");
-
-               // namesList.OrderBy(i =>i);
-                //Console.WriteLine("______________________________");
-                //foreach (var itm in namesList.OrderBy(i => i))
-                //    Console.Write(itm + ", ");
-
-
-                //Console.WriteLine("______________________________");
-                //var peopleInOrder = namesList.OrderBy(person => person);
-                //foreach (var itm in peopleInOrder)
-                //    Console.Write(peopleInOrder + ", ");
-
-
+               
             }
+            // Sort Method For Linked List
             public static void Sort(LinkedList<string> listsort)
             {
                 Console.WriteLine("______________________________");
