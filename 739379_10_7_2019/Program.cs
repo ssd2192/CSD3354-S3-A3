@@ -18,9 +18,12 @@ namespace _739379_10_7_2019
 
     class TextProcessing
     {
+        Queue<string> names = new Queue<string>();
         public void Run()
         {
+            
             // Open the names file and access the data
+
             using (StreamReader file = new StreamReader("D:/CSHARP/739379_10_7_2019/739379_10_7_2019/Names.txt"))
             {
                 int counter = 0;
@@ -28,7 +31,8 @@ namespace _739379_10_7_2019
 
                 while ((ln = file.ReadLine()) != null)
                 {
-                    Console.WriteLine(ln);
+                    //Console.WriteLine(ln);
+                    names.Enqueue(ln);
                     counter++;
                 }
                 file.Close();
