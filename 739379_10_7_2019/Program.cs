@@ -22,7 +22,8 @@ namespace _739379_10_7_2019
     {
         Queue<string> names = new Queue<string>();
 
-        //Stack<string> namesStack = new Stack<string>();
+        static Stack<string> nameStack = new Stack<string>();
+        static LinkedList<string> namesList = new LinkedList<string>();
         public void Run()
         {
 
@@ -53,8 +54,9 @@ namespace _739379_10_7_2019
                 Console.WriteLine($"File has {counter} lines.");
 
                 PlayingWithStacks.Run(names);
-
-
+                PlayingWithLinkedList.Run(nameStack);
+                PlayingWithLinkedList.Sort(namesList);
+                
             }
 
         }
@@ -63,7 +65,7 @@ namespace _739379_10_7_2019
         {
             public static void Run(Queue<string> tangerine)
             {
-                Stack<string> nameStack = new Stack<string>();
+                //Stack<string> nameStack = new Stack<string>();
                 // how can I access the Queue variables "names" here in this class???
                 // iterate OVER our Queue 
                 // get each element
@@ -80,10 +82,46 @@ namespace _739379_10_7_2019
                     i--;
                 }
                 foreach (var itm in nameStack)
-                    Console.WriteLine(itm);
+                    Console.Write(itm +", ");
+
+            }
+        }
+        class PlayingWithLinkedList
+        {
+            public static void Run(Stack<string> tangerine)
+            {
+                //LinkedList<string> namesList = new LinkedList<string>();
+
+                while (tangerine.Count()>0)
+                {
+                    namesList.AddFirst(tangerine.Pop());
+
+                }
+                Console.WriteLine("______________________________");
+                foreach (var itm in namesList)
+                    Console.Write(itm + ", ");
+
+               // namesList.OrderBy(i =>i);
+                //Console.WriteLine("______________________________");
+                //foreach (var itm in namesList.OrderBy(i => i))
+                //    Console.Write(itm + ", ");
+
+
+                //Console.WriteLine("______________________________");
+                //var peopleInOrder = namesList.OrderBy(person => person);
+                //foreach (var itm in peopleInOrder)
+                //    Console.Write(peopleInOrder + ", ");
 
 
             }
+            public static void Sort(LinkedList<string> listsort)
+            {
+                Console.WriteLine("______________________________");
+                foreach (var itm in listsort.OrderBy(i => i))
+                    Console.Write(itm + ", ");
+            }
+
+
         }
     }
 }
