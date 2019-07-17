@@ -72,8 +72,8 @@ namespace _739379_10_7_2019
                     Hugi.FoundAstrilde = true;
                 }
 
-                TraverseVillages(CurrentVillage.west);
                 TraverseVillages(CurrentVillage.east);
+                TraverseVillages(CurrentVillage.west);
 
             }
             catch (NullReferenceException) { }
@@ -88,7 +88,7 @@ namespace _739379_10_7_2019
             Schvenig = new Village("Schvenig", false);
             Wessig = new Village("Wessig", false);
             // TO DO: Complete this section
-            Maeland = new Village("Maeland", false);
+            Maeland = new Village("Maeland", true);
             Helmholtz = new Village("Helmholtz", false);
             Uster = new Village("Uster", false);
             Badden = new Village("badden", false);
@@ -105,10 +105,6 @@ namespace _739379_10_7_2019
             this.TraverseVillages(Alst);
             this.Announcement();
             Console.ReadLine();
-
-
-
-
 
         }
 
