@@ -12,12 +12,12 @@ namespace _739379_10_7_2019
     
     class Program
     {
-        static void Main(string[] args)
-        {
-            var tp = new TextProcessing();
-            tp.Run();
-            Console.ReadKey();
-        }
+        //static void Main(string[] args)
+        //{
+        //    var tp = new TextProcessing();
+        //    tp.Run();
+        //    Console.ReadKey();
+        //}
     }
 
     class TextProcessing
